@@ -3,62 +3,109 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaSwimmer,
   FaDumbbell,
   FaStore,
-  FaTree,
   FaSchool,
-  FaPalette,
-  FaRunning,
   FaUtensils,
-  FaBasketballBall,
+  FaFootballBall,
+  FaHeartbeat,
+  FaShieldAlt,
+  FaWifi,
+  FaSolarPanel,
+  FaBuilding,
+  FaSwimmingPool,
+  FaUsers,
+  FaLeaf,
+  FaCity,
 } from "react-icons/fa";
+import { FaBridge } from "react-icons/fa6";
 
 const amenities = [
   {
-    icon: <FaSwimmer className="w-10 h-10 text-green-600" />,
-    title: "Swimming Pools",
-    desc: "Relax and refresh in state-of-the-art pools.",
+    icon: <FaStore className="w-10 h-10 text-green-600" />,
+    title: "Shopping Malls",
+    description:
+      "A premium retail paradise offering local and international brands under one roof.",
+  },
+  {
+    icon: <FaCity className="w-10 h-10 text-green-600" />,
+    title: "Mixed-Use Urban Hub",
+    description:
+      "A dynamic blend of residential, commercial, and leisure spaces for a vibrant lifestyle.",
+  },
+  {
+    icon: <FaLeaf className="w-10 h-10 text-green-600" />,
+    title: "Sky Gardens & Rooftop Lounges",
+    description: "Elevated green retreats with breathtaking city views.",
+  },
+  {
+    icon: <FaBridge className="w-10 h-10 text-green-600" />,
+    title: "Sky Bridge",
+    description:
+      "An architectural marvel connecting towers with panoramic walkways.",
+  },
+  {
+    icon: <FaUsers className="w-10 h-10 text-green-600" />,
+    title: "Family Recreation Halls & Event Spaces",
+    description:
+      "Perfect venues for gatherings, celebrations, and community bonding.",
+  },
+  {
+    icon: <FaSwimmingPool className="w-10 h-10 text-green-600" />,
+    title: "Indoor Waterpark & Skywalk Bridge",
+    description: "Year-round aquatic fun with adventurous elevated walkways.",
+  },
+  {
+    icon: <FaBuilding className="w-10 h-10 text-green-600" />,
+    title: "Premium Business",
+    description:
+      "State-of-the-art corporate spaces designed for productivity and prestige.",
+  },
+  {
+    icon: <FaSolarPanel className="w-10 h-10 text-green-600" />,
+    title: "Smart Sustainability Systems",
+    description:
+      "Eco-friendly infrastructure with rain harvesting system, backup power set up and solar power for a cleaner, greener future.",
+  },
+  {
+    icon: <FaUtensils className="w-10 h-10 text-green-600" />,
+    title: "Podium-Level Lifestyle Facilities",
+    description:
+      "Exclusive leisure, dining, and entertainment zones at your doorstep.",
   },
   {
     icon: <FaDumbbell className="w-10 h-10 text-green-600" />,
     title: "Fitness Centers",
-    desc: "Stay active with world-class gym facilities.",
+    description:
+      "Modern gyms with professional trainers and wellness programs.",
   },
   {
-    icon: <FaBasketballBall className="w-10 h-10 text-green-600" />,
-    title: "Sports Complex",
-    desc: "Play, train, and enjoy competitive sports.",
+    icon: <FaWifi className="w-10 h-10 text-green-600" />,
+    title: "High-Speed Connectivity",
+    description:
+      "Lightning-fast internet for work, play, and everything in between.",
   },
   {
-    icon: <FaPalette className="w-10 h-10 text-green-600" />,
-    title: "Art & Cultural Centers",
-    desc: "Immerse yourself in art, music, and culture.",
+    icon: <FaShieldAlt className="w-10 h-10 text-green-600" />,
+    title: "24/7 Security & Automation",
+    description:
+      "Advanced two-layer surveillance and smart systems ensuring peace of mind.",
   },
   {
-    icon: <FaStore className="w-10 h-10 text-green-600" />,
-    title: "Shopping Malls",
-    desc: "Experience luxury and convenience in shopping.",
-  },
-  {
-    icon: <FaUtensils className="w-10 h-10 text-green-600" />,
-    title: "Dining Experiences",
-    desc: "Taste the world’s flavors in one place.",
-  },
-  {
-    icon: <FaTree className="w-10 h-10 text-green-600" />,
-    title: "Parks & Trails",
-    desc: "Reconnect with nature in lush green spaces.",
+    icon: <FaHeartbeat className="w-10 h-10 text-green-600" />,
+    title: "Family & Wellness Zones",
+    description:
+      "Safe, relaxing spaces dedicated to health, happiness, and togetherness.",
   },
   {
     icon: <FaSchool className="w-10 h-10 text-green-600" />,
     title: "Top-Tier Schools",
-    desc: "Quality education within walking distance.",
+    description: "Quality education within walking distance of your home.",
   },
   {
-    icon: <FaRunning className="w-10 h-10 text-green-600" />,
-    title: "Jogging Tracks",
-    desc: "Stay fit with dedicated running paths.",
+    icon: <FaFootballBall className="w-10 h-10 text-green-600" />,
+    title: "Sports and Play Areas",
+    description: "Dedicated courts, fields, and playgrounds for all ages.",
   },
 ];
 
@@ -102,7 +149,7 @@ export default function LifestyleAmenities() {
                 {item.title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                {item.desc}
+                {item.description}
               </p>
             </motion.div>
           ))}
