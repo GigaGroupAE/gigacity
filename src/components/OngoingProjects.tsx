@@ -29,7 +29,7 @@ const OngoingProjects = () => {
     {
       title: "Giga Business Complex",
       description:
-        "The best gift one can present to their loved ones is a promising future. Giga Group is coming up with a massive opportunity for you to secure the future of those you love the most. A launching pad for dreams to take flight and ambitions to soar. This time it’s not about corporate investments – this time, its about the investment you make for your heart!",
+        "The best gift one can present to their loved ones is a promising future. Giga Group is coming up with a massive opportunity for you to secure the future of those you love the most. A launching pad for dreams to take flight and ambitions to soar. This time it’s not about corporate investments – this time, it's about the investment you make for your heart!",
       button: "Learn More",
       image: "/Giga_BusinessC.webp",
     },
@@ -62,52 +62,58 @@ const OngoingProjects = () => {
       image: "/GME.webp",
     },
   ];
+
   const truncateText = (text: string, limit: number): string =>
     text.length > limit ? text.substring(0, limit) + "..." : text;
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-white via-green-50 to-green-100">
-      <div className="max-w-7xl mx-auto">
-        {/* Animated Heading */}
+    <section className="relative py-24 px-6 bg-gradient-to-br from-white via-green-50 to-green-100 overflow-hidden">
+      {/* Optional floating glow background */}
+      <div className="absolute top-[10%] left-[-10%] w-[300px] h-[300px] bg-green-200 opacity-20 rounded-full blur-3xl z-0" />
+      <div className="absolute bottom-[5%] right-[-10%] w-[250px] h-[250px] bg-green-300 opacity-10 rounded-full blur-2xl z-0" />
+
+      <div className="relative max-w-7xl mx-auto z-10">
+        {/* Section Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-12 text-green-800"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-green-800"
         >
           Ongoing Projects
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Project Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-              className="relative rounded-2xl overflow-hidden shadow-lg group"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl bg-white/30 backdrop-blur-md border border-white/20 transition-all duration-300 hover:scale-[1.02]"
             >
-              {/* Background Image */}
-              <div className="relative w-full h-[500px]">
+              {/* Project Image */}
+              <div className="relative w-full h-[320px]">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent text-white p-4 transition-all duration-500 group-hover:top-0 group-hover:via-black/90 group-hover:from-black/90 flex flex-col justify-end">
-                <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-                <p className="text-sm text-gray-200">
-                  {truncateText(project.description, 200)}
+              {/* Overlay Info Box */}
+              <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/80 via-black/60 to-transparent text-white transition-all duration-500 group-hover:top-0 group-hover:via-black/90 group-hover:from-black/90 flex flex-col justify-end">
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-sm text-gray-200 line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
+                  {project.description}
                 </p>
 
-                <div className="hidden group-hover:block mt-2 text-sm text-gray-200">
-                  {project.description}
-                </div>
-                {/* 
-                <button className="mt-3 inline-block px-4 py-2 bg-green-700 rounded-full hover:bg-green-800 transition">
+                {/* Optional button - uncomment if needed */}
+                {/* <button className="mt-4 inline-block self-start px-4 py-2 bg-green-700 text-white rounded-full hover:bg-green-800 transition">
                   {project.button}
                 </button> */}
               </div>

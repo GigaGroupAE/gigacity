@@ -5,6 +5,11 @@ import OngoingProjects from "./OngoingProjects";
 import MasterPlan from "./MasterPlan";
 import LifestyleAmenities from "./ LifestyleAmenities";
 import Gallery from "./Gallery";
+import LocationConnectivity from "./LocationConnectivity";
+import SustainabilitySmartFeatures from "./SustainabilitySmartFeatures";
+import InvestmentBenefits from "./InvestmentBenefits";
+import ContactForm from "./ContactForm";
+import FAQ from "./FAQ";
 
 const HeroMain = () => {
   return (
@@ -16,6 +21,11 @@ const HeroMain = () => {
       <MasterPlan />
       <LifestyleAmenities />
       <Gallery />
+      <LocationConnectivity />
+      <SustainabilitySmartFeatures />
+      <InvestmentBenefits />
+      <ContactForm />
+      <FAQ />
     </section>
   );
 };
