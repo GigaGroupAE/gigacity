@@ -2,8 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// import heroVideo from "../../public/gigaCity.mp4"
-
 const HeroSectionHome = () => {
   return (
     <>
@@ -14,10 +12,7 @@ const HeroSectionHome = () => {
           loop
           muted
         >
-          <source
-            src="https://goldcrestviews.com.pk/wp-content/uploads/2025/08/Gigacity-A-name-that-reflects-a-legacy-and-values.-Giga-Group-Pakistan-1080p-h264.mp4"
-            type="video/mp4"
-          />
+          <source src="/gigaCity.mp4" type="video/mp4" />
         </video>
 
         <div className="z-10    relative md:left-20 left-10 bottom-8 md:bottom-20 w-10/12 md:w-1/3 bg-white/30 backdrop-blur-md bg-opacity-50  p-6 rounded-lg">
