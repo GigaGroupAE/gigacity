@@ -9,6 +9,9 @@ import {
   FaRecycle,
   FaWifi,
   FaRobot,
+  FaUserShield,
+  FaVideo,
+  FaShieldAlt,
 } from "react-icons/fa";
 
 const features = [
@@ -42,11 +45,30 @@ const features = [
     description:
       "High-speed internet and IoT devices for a connected lifestyle.",
   },
+
   {
-    icon: <FaRobot className="text-green-600 w-10 h-10" />,
-    title: "Automation & AI",
+    icon: <FaUserShield className="text-green-600 w-10 h-10" />,
+    title: "Resident Safety",
     description:
-      "Smart traffic systems, energy management, and safety powered by AI.",
+      "Dedicated security personnel patrolling and emergency response teams on site.",
+  },
+  {
+    icon: <FaVideo className="text-green-600 w-10 h-10" />,
+    title: "CCTV Surveillance",
+    description:
+      "High-definition cameras covering all entry points and public areas.",
+  },
+  {
+    icon: <FaShieldAlt className="text-green-600 w-10 h-10" />,
+    title: "Gated Security",
+    description:
+      "Reliable gated security with professional guards and monitored access, following standards like DHA society and Giga internal city.",
+  },
+  {
+    icon: <FaLeaf className="text-green-600 w-10 h-10" />,
+    title: "Sustainable Development Model",
+    description:
+      "Self-sufficient internal power generation ensures uninterrupted electricity with no load-shedding, alongside a reliable water supply system guaranteeing continuous availability.",
   },
 ];
 

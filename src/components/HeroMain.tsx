@@ -19,9 +19,10 @@ const HeroMain = () => {
       <AboutHome />
       <OngoingProjects />
       <MasterPlan />
+      <LocationConnectivity />
       <LifestyleAmenities />
       <Gallery />
-      <LocationConnectivity />
+
       <SustainabilitySmartFeatures />
       <InvestmentBenefits />
       <ContactForm />
