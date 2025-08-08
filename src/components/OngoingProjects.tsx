@@ -54,13 +54,6 @@ const OngoingProjects = () => {
       button: "Learn More",
       image: "/highlife.webp",
     },
-    {
-      title: "World Trade Center Islamabad",
-      description:
-        "Give your business a “Home” at a prestigious business location. Giga Group is now offering office space in the World Trade Center Islamabad. You can get your office space in very flexible layouts and an easy 18-month installment plan.",
-      button: "Learn More",
-      image: "/GME.webp",
-    },
   ];
 
   const truncateText = (text: string, limit: number): string =>
