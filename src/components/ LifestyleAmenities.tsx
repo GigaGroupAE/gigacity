@@ -22,6 +22,12 @@ import { FaBridge } from "react-icons/fa6";
 
 const amenities = [
   {
+    icon: <FaUsers className="w-10 h-10 text-green-600" />,
+    title: "Vibrant Community Living",
+    description:
+      "A socially engaging environment fostering connections, culture, and belonging.",
+  },
+  {
     icon: <FaStore className="w-10 h-10 text-green-600" />,
     title: "Shopping Malls",
     description:

@@ -89,7 +89,7 @@ const OngoingProjects = () => {
               className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl bg-white/30 backdrop-blur-md border border-white/20 transition-all duration-300 hover:scale-[1.02]"
             >
               {/* Project Image */}
-              <div className="relative w-full h-[320px]">
+              <div className="relative w-full h-[500px]">
                 <Image
                   src={project.image}
                   alt={project.title}
