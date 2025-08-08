@@ -4,6 +4,13 @@ import Image from "next/image";
 import { FaCity } from "react-icons/fa";
 import { HiOutlineMap } from "react-icons/hi";
 import { GiGreenPower } from "react-icons/gi";
+import { ReactNode } from "react";
+
+interface FeatureCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+}
 
 export default function MasterPlan() {
   return (
@@ -30,7 +37,6 @@ export default function MasterPlan() {
             </p>
           </motion.div>
 
-          {/* Master Plan Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -48,7 +54,6 @@ export default function MasterPlan() {
           </motion.div>
         </div>
 
-        {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20">
           <FeatureCard
             icon={<FaCity className="w-10 h-10 text-yellow-500" />}
@@ -71,7 +76,7 @@ export default function MasterPlan() {
   );
 }
 
-function FeatureCard({ icon, title, description }) {
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

@@ -2,10 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState } from "react";
+
+interface Project {
+  title: string;
+  description: string;
+  button: string;
+  image: string;
+}
 
 const OngoingProjects = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Goldcrest Views Islamabad",
       description:
@@ -56,8 +62,7 @@ const OngoingProjects = () => {
       image: "/GME.webp",
     },
   ];
-
-  const truncateText = (text, limit) =>
+  const truncateText = (text: string, limit: number): string =>
     text.length > limit ? text.substring(0, limit) + "..." : text;
 
   return (

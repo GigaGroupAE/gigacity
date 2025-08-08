@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import HeroSectionHome from "./HeroHome";
 import AboutHome from "./AboutHome";
 import OngoingProjects from "./OngoingProjects";
