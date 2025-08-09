@@ -1,21 +1,18 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-const menuItemsClient = [
+const navLinks = [
   { name: "Home", path: "/" },
-  { name: "View Application", path: "" },
-  { name: "Submit Application", path: "" },
-  { name: "Blogs", path: "/blogs" },
-  { name: "Our Services", path: "/our-services" },
-  { name: "About Us", path: "/#about-us" },
+  { name: "About", path: "/about" },
+  { name: "Projects", path: "/projects" },
+  { name: "Gallery", path: "/gallery" },
+  { name: "Contact", path: "/contact-us" },
 ];
 
-interface NavbarProps {
-  setIsModalOpen?: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Navbar: React.FC<NavbarProps> = () => {
+const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -24,55 +21,41 @@ const Navbar: React.FC<NavbarProps> = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed left-1/2 transform -translate-x-1/2 transition-all duration-500 ease-in-out z-[9999] 
-        ${
-          isScrolled
-            ? "top-0 w-full rounded-3xl bg-pink-100/40 backdrop-blur-lg shadow-lg"
-            : "top-0 w-full bg-white shadow-md"
-        }`}
+      className={`fixed bg-white w-full top-0 z-[9999] transition-all duration-300 ease-in-out ${
+        isScrolled ? "bg-white/60 backdrop-blur-lg shadow-lg" : "bg-transparent"
+      }`}
     >
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo */}
-        {/* <a
-          href="/"
-          className={`text-xl font-bold transition ${
-            isScrolled ? "text-gray-900" : "text-gray-800 hover:text-pink-500"
-          }`}
-        >
-          PakBritishNikkah
-        </a> */}
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <Link href="/" className="text-2xl font-bold text-green-800">
+          Giga City
+        </Link>
 
-        {/* Menu for Large Screens */}
-        <div className="hidden lg:flex  items-center space-x-6">
-          <ul className="flex space-x-6">
-            {menuItemsClient.map((item, index) => (
-              <li key={index} role="menuitem">
-                <div className="transition cursor-pointer relative px-3 py-1 rounded-lg text-gray-900">
-                  {item.name}
-                  <motion.span
-                    className="absolute inset-0 rounded-lg opacity-0"
-                    whileHover={{ opacity: 1, scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </div>
-              </li>
-            ))}
-          </ul>
+        <div className="hidden lg:flex space-x-8">
+          {navLinks.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              className="text-gray-800 font-medium hover:text-green-700 transition"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
 
-        {/* Mobile Menu Button */}
-        <button>☰</button>
-        {/* </Button> */}
+        <button
+          onClick={() => setIsMenuOpen(true)}
+          className="lg:hidden flex items-center justify-center w-10 h-10 bg-green-100 text-green-800 rounded-full"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -80,38 +63,32 @@ const Navbar: React.FC<NavbarProps> = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.4 }}
-            className="fixed top-0 left-0 w-full h-screen bg-white/30 backdrop-blur-md shadow-lg lg:hidden z-50 flex flex-col justify-center items-center"
+            className="fixed top-0 left-0 w-full h-screen bg-white/40 backdrop-blur-xl z-[9998] flex justify-center items-center lg:hidden"
           >
             <motion.div
-              initial={{ x: -100, opacity: 0 }}
+              initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="bg-[#F2F2F2] p-6 rounded-2xl shadow-lg w-96 flex flex-col space-y-6"
+              exit={{ x: 50, opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="bg-white/70 backdrop-blur-md rounded-2xl p-8 shadow-lg w-80 flex flex-col space-y-6"
             >
-              {menuItemsClient.map((item, index) => (
-                <motion.a
-                  key={item?.name}
-                  // href={item?.path}
-                  initial={{ x: -50, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-xl text-gray-900  transition relative px-4 py-2 rounded-xl"
+              {navLinks.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-lg text-gray-900 font-semibold hover:text-green-700 transition"
                 >
-                  {item?.name}
-                  <motion.span
-                    className="absolute inset-0 bg-white/20 backdrop-blur-md rounded-xl opacity-0"
-                    whileHover={{ opacity: 1, scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </motion.a>
+                  {item.name}
+                </Link>
               ))}
 
               <motion.button
                 onClick={() => setIsMenuOpen(false)}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: 0.5 }}
-                className="mt-6 px-6 py-2 bg-pink-500 text-white rounded-full  transition"
+                transition={{ duration: 0.3 }}
+                className="mt-6 px-6 py-2 bg-green-700 hover:bg-green-800 text-white rounded-full transition"
               >
                 Close Menu
               </motion.button>

@@ -8,7 +8,6 @@ import {
   FaWater,
   FaRecycle,
   FaWifi,
-  FaRobot,
   FaUserShield,
   FaVideo,
   FaShieldAlt,

@@ -56,8 +56,8 @@ const OngoingProjects = () => {
     },
   ];
 
-  const truncateText = (text: string, limit: number): string =>
-    text.length > limit ? text.substring(0, limit) + "..." : text;
+  // const truncateText = (text: string, limit: number): string =>
+  //   text.length > limit ? text.substring(0, limit) + "..." : text;
 
   return (
     <section className="relative py-24 px-6 bg-gradient-to-br from-white via-green-50 to-green-100 overflow-hidden">
