@@ -14,7 +14,7 @@ const iconicProjects: Project[] = [
     title: "Goldcrest Views Islamabad",
     description:
       "Seven 40-storey towers with penthouses, studios, and 1–4-bedroom apartments, offering award-winning luxury in DHA Phase II.",
-    image: "/gigacity9.webp",
+    image: "/goldcrestviewsProject.webp",
   },
   {
     title: "Goldcrest Highlife",
@@ -32,7 +32,7 @@ const iconicProjects: Project[] = [
     title: "Giga Boutique Mall",
     description:
       "An exclusive commercial destination with curated retail spaces in the heart of Giga City.",
-    image: "/boutique-mall.webp",
+    image: "/GBM.webp",
   },
 ];
 
@@ -41,13 +41,13 @@ const ongoingProjects: Project[] = [
     title: "Goldcrest Commercial",
     description:
       "A nine-story commercial hub with retail, medical facilities, food court, and mobile market, located next to Giga Mall.",
-    image: "/goldcrest-commercial.webp",
+    image: "/goldcrest-commerical.webp",
   },
   {
     title: "Giga Business Complex",
     description:
       "State-of-the-art office spaces designed to launch careers and businesses into success.",
-    image: "/Giga_BusinessC.jpeg",
+    image: "/Giga_BusinessC.webp",
   },
   {
     title: "Central Palace Residence",
@@ -62,7 +62,7 @@ const deliveredProjects: Project[] = [
     title: "El Cielo I & II",
     description:
       "Premium apartment complex with three tiers (premium, plus, executive), nearly complete and highly sought-after.",
-    image: "/elcielo.webp",
+    image: "/El-Cielo.jpg",
   },
   {
     title: "Lignum Tower",
@@ -74,7 +74,7 @@ const deliveredProjects: Project[] = [
     title: "World Trade Center Islamabad",
     description:
       "Mixed-use hub combining a mall, offices, and hotel, operational since 2016.",
-    image: "/wtc.webp",
+    image: "/WTC.webp",
   },
 ];
 
@@ -138,7 +138,7 @@ function Section({ title, projects }: { title: string; projects: Project[] }) {
             viewport={{ once: true }}
             className="bg-white/40 border border-white/30 rounded-2xl shadow-lg backdrop-blur-md overflow-hidden hover:shadow-2xl transition cursor-pointer"
           >
-            <div className="relative w-full h-52 md:h-48">
+            <div className="relative w-full h-72 md:h-96">
               <Image
                 src={proj.image}
                 alt={proj.title}
