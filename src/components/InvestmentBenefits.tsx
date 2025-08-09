@@ -101,13 +101,20 @@ export default function InvestmentBenefits() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <FaChartLine className="w-12 h-12 text-green-600 mb-4" />
+          {/* <FaChartLine className=" text-green-600 mb-4" /> */}
           <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-            High ROI Opportunity
+            Portfolio Diversification
           </h3>
           <p className="text-gray-600 text-base mb-4">
-            Giga City is positioned for exceptional growth, attracting investors
-            seeking long-term capital gains and high rental demand.
+            Giga City Islamabad presents a unique opportunity for portfolio
+            diversification, offering a mix of residential, commercial, and
+            leisure investments within one master-planned community. From luxury
+            apartments and premium business centers to high-footfall shopping
+            malls and entertainment hubs, investors can spread risk while
+            tapping into multiple revenue streams. This diverse asset mix
+            ensures long-term stability, consistent returns, and growth
+            potential in one of Islamabad’s most sought-after urban
+            destinations.
           </p>
 
           <button className="mt-auto px-5 py-2 bg-green-700 text-white rounded-full hover:bg-green-800 transition">

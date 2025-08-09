@@ -2,13 +2,29 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FaPlane, FaCar, FaBuilding, FaTree } from "react-icons/fa";
+import { FaPlane, FaCar, FaBuilding, FaHospital } from "react-icons/fa";
 
 const connectivityData = [
-  { icon: FaPlane, title: "Airport", distance: "15 min drive" },
-  { icon: FaCar, title: "Highway Access", distance: "5 min drive" },
-  { icon: FaBuilding, title: "Business District", distance: "10 min drive" },
-  { icon: FaTree, title: "Recreational Spots", distance: "8 min drive" },
+  {
+    icon: FaPlane,
+    title: "Proximity to Airport",
+    distance: "Only 50 to 60 minutes from the airport",
+  },
+  {
+    icon: FaCar,
+    title: "Easy Highway Access",
+    distance: "10 minutes to major highway access",
+  },
+  {
+    icon: FaBuilding,
+    title: "Business & Education Hub",
+    distance: "15 minutes to top schools and colleges",
+  },
+  {
+    icon: FaHospital,
+    title: "Nearby Healthcare Facilities",
+    distance: "25-30 minutes to top hospitals",
+  },
 ];
 
 export default function LocationConnectivity() {
@@ -47,9 +63,12 @@ export default function LocationConnectivity() {
             Location & <span className="text-green-600">Connectivity</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Giga City offers prime accessibility with quick access to major
-            highways, airports, and city landmarks — the perfect mix of
-            lifestyle and convenience.
+            Perfectly positioned in the heart of DHA Phase 2, Giga City offers
+            seamless access to everything that matters. Whether you’re heading
+            to the airport, connecting to major highways, commuting to the
+            business district, or enjoying nearby recreational spots, every
+            destination is just minutes away. With its strategic location, Giga
+            City combines urban convenience with an elevated lifestyle.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

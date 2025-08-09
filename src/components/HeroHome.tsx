@@ -15,14 +15,14 @@ const HeroSectionHome = () => {
         ></div>
 
         <div className="z-10 relative md:left-20 left-10 bottom-8 md:bottom-20 w-10/12 md:w-1/3 bg-white/30 backdrop-blur-md bg-opacity-50 p-6 rounded-lg">
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-2xl text-start md:text-4xl font-bold text-white font-poppins"
           >
-            GIGACITY: A modern urban hub in Islamabad.
-          </motion.h2>
+            Giga City Islamabad – The Modern Urban Landmark of Islamabad
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -30,9 +30,13 @@ const HeroSectionHome = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="text-lg mt-4 text-start text-gray-300 font-poppins"
           >
-            A thriving mixed-use neighborhood with shops, parks, cultural
-            events, and sustainable infrastructure all in the heart of DHA Phase
-            2.
+            Giga City is a vibrant, next-generation urban destination in the
+            heart of DHA Phase 2, Islamabad. Designed as a thriving mixed-use
+            community, it seamlessly blends premium shopping, lush green parks,
+            cultural attractions, and world-class amenities. With a focus on
+            sustainability and smart infrastructure, Giga City offers a dynamic
+            lifestyle where business, leisure, and community living come
+            together in one iconic address.
           </motion.p>
         </div>
       </section>

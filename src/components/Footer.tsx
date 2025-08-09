@@ -4,6 +4,9 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
+  FaYoutube,
+  FaTiktok,
+  FaPinterest,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -14,10 +17,9 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Giga City. All rights reserved.
         </p>
 
-        {/* Social Icons */}
         <div className="flex items-center space-x-4 mt-4 md:mt-0">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/gigacityisb"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-green-300 transition text-lg"
@@ -26,7 +28,7 @@ const Footer = () => {
             <FaFacebookF />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/CityGigaIsb"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-green-300 transition text-lg"
@@ -35,7 +37,7 @@ const Footer = () => {
             <FaTwitter />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/gigacityisb/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-green-300 transition text-lg"
@@ -44,13 +46,41 @@ const Footer = () => {
             <FaInstagram />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/gigacityisb/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-green-300 transition text-lg"
             aria-label="LinkedIn"
           >
             <FaLinkedinIn />
+          </a>
+
+          <a
+            href="https://www.youtube.com/@GigaCityIslamabadOfficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-green-300 transition text-lg"
+            aria-label="LinkedIn"
+          >
+            <FaYoutube />
+          </a>
+          <a
+            href="https://www.tiktok.com/@gigacityisb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-green-300 transition text-lg"
+            aria-label="LinkedIn"
+          >
+            <FaTiktok />
+          </a>
+          <a
+            href="https://www.pinterest.com/gigacityisb/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-green-300 transition text-lg"
+            aria-label="LinkedIn"
+          >
+            <FaPinterest />
           </a>
         </div>
       </div>

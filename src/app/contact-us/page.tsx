@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
 
 export default function ContactUsPage() {
   // const [formData, setFormData] = useState({
@@ -45,7 +44,7 @@ export default function ContactUsPage() {
             transition={{ duration: 0.8 }}
             className="text-2xl text-start md:text-4xl font-bold text-white font-poppins"
           >
-            About <span className="text-green-300">Giga City</span>
+            Contact Us
           </motion.h2>
 
           <motion.p
@@ -54,13 +53,10 @@ export default function ContactUsPage() {
             transition={{ duration: 1, delay: 0.3 }}
             className="text-lg mt-4 text-start text-gray-300 font-poppins"
           >
-            Giga City is more than just a place — it’s a vision for the future.
-            Designed as a thriving hub where{" "}
-            <strong>innovation meets sustainability</strong>, we blend
-            cutting-edge urban planning with eco-conscious practices to create a
-            city that grows with its people, not at the cost of the planet.
-            Here, modern living, community spirit, and environmental care exist
-            in perfect harmony.
+            Have questions about Giga City Islamabad? Ready to explore luxury
+            apartments, commercial spaces, or business hubs in this
+            groundbreaking development? We’re here to help you every step of the
+            way.
           </motion.p>
         </div>
       </div>

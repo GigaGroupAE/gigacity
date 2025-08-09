@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Footer from "@/components/Footer";
 
 interface Project {
   title: string;
@@ -106,8 +105,12 @@ export default function ProjectsPage() {
             transition={{ duration: 1, delay: 0.3 }}
             className="text-lg mt-4 text-start text-gray-300 font-poppins"
           >
-            Explore the legacy, innovation, and impact of Giga City&apos;s
-            developments.
+            Experience Giga City’s exceptional developments that blend
+            innovation, elegance, and functionality. From luxury residences to
+            premium commercial spaces, each project is crafted with
+            state-of-the-art design, modern amenities, and strategic locations,
+            building vibrant communities and setting new benchmarks in
+            Pakistan’s real estate landscape.
           </motion.p>
         </div>
       </div>

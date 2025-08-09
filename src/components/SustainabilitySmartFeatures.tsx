@@ -61,7 +61,7 @@ const features = [
     icon: <FaShieldAlt className="text-green-600 w-10 h-10" />,
     title: "Gated Security",
     description:
-      "Reliable gated security with professional guards and monitored access, following standards like DHA society and Giga internal city.",
+      "Two-layer security with a professional guard and monitored access, following DHA Phase 2 and Giga City internal security ",
   },
   {
     icon: <FaLeaf className="text-green-600 w-10 h-10" />,

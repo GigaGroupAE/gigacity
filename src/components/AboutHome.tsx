@@ -8,7 +8,7 @@ export default function AboutGigaDowntown() {
     {
       icon: <FaMapMarkerAlt size={30} />,
       title: "Prime Location",
-      desc: "Located in the heart of Giga City, connecting you to business, leisure, and lifestyle effortlessly.",
+      desc: "Located in the heart of DHA Phase 2 Islamabad proving everyone with the place where its either Living or Business both can thrive",
     },
     {
       icon: <FaCity size={30} />,
@@ -44,16 +44,20 @@ export default function AboutGigaDowntown() {
             animate={{ opacity: [0, 1], y: [20, 0] }}
             transition={{ duration: 0.8 }}
           >
-            About <span className="text-green-600">Giga City</span>
+            About <span className="text-green-600">Giga City Islamabad</span>
           </motion.h2>
           <p className="text-gray-600 leading-relaxed text-lg">
-            Giga City blends innovation, sustainability, and smart design in the
-            heart of DHA — a future-ready community where living, working, and
-            thriving come together.
+            Giga City Islamabad is redefining urban living in the heart of DHA
+            with a perfect blend of modern architecture, eco-friendly planning,
+            and smart infrastructure. Designed as a vibrant, future-ready
+            community, it offers seamless integration of residential,
+            commercial, and recreational spaces. From lush parks and cultural
+            experiences to cutting-edge business hubs, Giga City is where
+            lifestyle, work, and leisure come together to create an unmatched
+            living experience in Islamabad.
           </p>
         </motion.div>
 
-        {/* Highlights Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {highlights.map((item, i) => (
             <motion.div

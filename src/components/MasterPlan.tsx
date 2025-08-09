@@ -30,12 +30,20 @@ export default function MasterPlan() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Master Plan of <span className="text-green-600">Giga City</span>
+              Master Plan of
+              <span className="text-green-600"> Giga City Islamabad</span>
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
-              The Master Plan of Giga City creates a balanced mix of modern
-              living, business opportunities, and lush landscapes. Designed for
-              seamless connectivity and a sustainable future.
+              The Master Plan of Giga City is a visionary blueprint that
+              harmoniously combines luxury apartments, dynamic business centers,
+              and world-class shopping malls with lush green spaces and modern
+              infrastructure. Situated in the heart of DHA Phase 2, it offers a
+              vibrant mixed-use environment where residents enjoy premium
+              living, thriving commercial opportunities, and endless retail and
+              entertainment options. Designed with smart connectivity,
+              sustainable practices, and a focus on community well-being, Giga
+              City sets a new standard for urban living in Islamabad, where
+              life, work, and leisure come together seamlessly.
             </p>
           </motion.div>
 
@@ -61,17 +69,20 @@ export default function MasterPlan() {
           <FeatureCard
             icon={<FaCity className="w-10 h-10 text-green-600" />}
             title="Mixed-Use Zones"
-            description="Residential, commercial, and leisure areas in perfect balance."
+            description=" A harmonious blend of residential, commercial, business, and leisure spaces, creating a vibrant and self-sustaining community.
+"
           />
           <FeatureCard
             icon={<HiOutlineMap className="w-10 h-10 text-green-600" />}
             title="Seamless Connectivity"
-            description="Integrated transport networks for effortless travel."
+            description=" Well-planned transport networks ensure smooth and effortless access to every part of the city and beyond.
+"
           />
           <FeatureCard
             icon={<GiGreenPower className="w-10 h-10 text-green-600" />}
             title="Eco-Friendly Design"
-            description="Green energy solutions and sustainable living."
+            description=" Built with green energy solutions and sustainable practices to promote healthier, environmentally conscious living.
+"
           />
         </div>
       </div>

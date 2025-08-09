@@ -47,9 +47,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Giga City | Modern Urban Living & Premier Real Estate Development",
+  title:
+    "Giga City Islamabad: Modern Urban Living & Business Hubs in DHA Phase 2",
   description:
-    "Explore Giga City, a state-of-the-art real estate project offering luxury residential and commercial spaces with world-class amenities, designed for modern urban living.",
+    "Explore Giga City Islamabad, a thriving mixed-use community in DHA Phase 2. Offering luxury living, commercial spaces, eco-friendly designs, and world-class amenities, it sets the new standard for urban living and investment in Islamabad.",
 };
 
 export default function RootLayout({
