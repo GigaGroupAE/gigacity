@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://gigacity.com.pk
+
+# Sitemaps
+Sitemap: https://gigacity.com.pk/sitemap.xml

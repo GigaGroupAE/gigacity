@@ -7,12 +7,12 @@ const HeroSectionHome = () => {
   return (
     <>
       <section className="relative w-full h-screen flex justify-start items-end text-center">
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: `url('/nightview-giga-downtown.jpg')`,
-          }}
-        ></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center">
+          <video autoPlay loop muted className="w-full h-full object-cover">
+            <source src="/your-video-file.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
         <div className="z-10 relative md:left-20 left-10 bottom-8 md:bottom-20 w-10/12 md:w-1/3 bg-white/30 backdrop-blur-md bg-opacity-50 p-6 rounded-lg">
           <motion.h1

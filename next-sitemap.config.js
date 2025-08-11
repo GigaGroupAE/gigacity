@@ -1,4 +1,6 @@
 module.exports = {
-  siteUrl: "https://www.gigacity.com.pk/",
+  siteUrl: "https://gigacity.com.pk",
   generateRobotsTxt: true,
+  sitemapSize: 5000,
+  priority: 0.7,
 };
