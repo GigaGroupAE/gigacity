@@ -112,8 +112,8 @@ export default function ContactForm() {
           </p>
           <ul className="text-gray-700 space-y-2">
             <li>📍 On-ground team ready to assist</li>
-            <li>📞 Quick response time</li>
-            <li>📧 Flexible contact options (email or phone)</li>
+            <li>📞 +92 51 111 786 123</li>
+            <li>📧 sales@gigagroup.com</li>
           </ul>
         </motion.div>
       </div>
